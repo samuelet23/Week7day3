@@ -10,8 +10,8 @@ public class Tenente extends Militare{
 
     @Override
     public void gestioneStipendio(int importo) {
-        if (importo >= STIPENDIO) {
-            System.out.println("Il Tenente percepisce "+ STIPENDIO);
+        if (importo <= STIPENDIO) {
+            System.out.println("Il Tenente percepisce una cifra superiore o uguale a "+ importo + ", il suo stipendio è "+STIPENDIO);
         }
         else {
             getProssimo().gestioneStipendio(importo);

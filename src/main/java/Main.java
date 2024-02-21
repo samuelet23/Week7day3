@@ -42,9 +42,11 @@ public class Main {
 
 //        esercizio 3
 
+        System.out.println("-------------------");
+     Militare ufficiali = new Capitano(new Maggiore(new Colonnello(new Generale(null))));
 
-     Militare gerarchiaUfficili = new Capitano(new Maggiore(new Colonnello(new Generale(null))));
-     gerarchiaUfficili.gestioneStipendio(3500);
+
+     ufficiali.gestioneStipendio(2500);
 
 
 
