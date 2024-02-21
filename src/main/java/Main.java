@@ -2,9 +2,11 @@ import Adapter.DataSource;
 import Adapter.Info;
 import Adapter.InfoAdapter;
 import Adapter.UserData;
+import ChainOfResponsibility.*;
 import Composite.*;
 
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -37,6 +39,16 @@ public class Main {
         Libro libro = new Libro(20,List.of(autore1, autore2), contenuto);
         int numPageTot = libro.numeroPagine();
         System.out.println("Numero pagine totali del libro: "+numPageTot);
+
+//        esercizio 3
+
+
+     Militare gerarchiaUfficili = new Capitano(new Maggiore(new Colonnello(new Generale(null))));
+     gerarchiaUfficili.gestioneStipendio(3500);
+
+
+
+
 
 
     }
