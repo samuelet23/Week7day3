@@ -9,8 +9,8 @@ public class Capitano extends Militare {
 
         @Override
         public void gestioneStipendio(int importo) {
-            if (importo >= STIPENDIO) {
-                System.out.println("Il Capitano percepisce "+ STIPENDIO);
+            if (importo <= STIPENDIO) {
+                System.out.println("Il Capitano percepisce una cifra superiore o ugualeo a "+ importo + ", il suo stipendio è "+STIPENDIO);
             }
             else {
                 getProssimo().gestioneStipendio(importo);
